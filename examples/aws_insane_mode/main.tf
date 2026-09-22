@@ -11,7 +11,7 @@ module "spoke_aws_1" {
   network_domain = "blue"
   insane_mode    = true
   instances = {
-    "App1"    = {}
+    "App1"   = {}
     "App1-2" = {}
   }
 }

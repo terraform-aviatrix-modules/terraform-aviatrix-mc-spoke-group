@@ -10,7 +10,7 @@ module "spoke_azure_1" {
   transit_gw     = "avx-west-europe-transit"
   network_domain = "green"
   instances = {
-    "App1"    = {}
+    "App1"   = {}
     "App1-2" = {}
   }
 }

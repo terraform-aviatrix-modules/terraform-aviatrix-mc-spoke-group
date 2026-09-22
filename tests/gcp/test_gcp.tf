@@ -14,24 +14,24 @@ provider "aviatrix" {}
 module "single_instance" {
   source = "../.."
 
-  cloud    = "gcp"
-  name     = "spoke-single-gcp"
-  region   = "us-east1"
-  cidr     = "10.1.101.0/24"
-  account  = "GCP"
-  attached = false
+  cloud     = "gcp"
+  name      = "spoke-single-gcp"
+  region    = "us-east1"
+  cidr      = "10.1.101.0/24"
+  account   = "GCP"
+  attached  = false
   instances = { for i in range(1) : "spoke-single-gcp-${i + 1}" => {} }
 }
 
 module "multi_instance" {
   source = "../.."
 
-  cloud    = "gcp"
-  name     = "spoke-multi-gcp"
-  region   = "us-east1"
-  cidr     = "10.1.102.0/24"
-  account  = "GCP"
-  attached = false
+  cloud     = "gcp"
+  name      = "spoke-multi-gcp"
+  region    = "us-east1"
+  cidr      = "10.1.102.0/24"
+  account   = "GCP"
+  attached  = false
   instances = { for i in range(2) : "spoke-multi-gcp-${i + 1}" => {} }
 }
 

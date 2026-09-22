@@ -14,24 +14,24 @@ provider "aviatrix" {}
 module "single_instance" {
   source = "../.."
 
-  cloud    = "azure"
-  name     = "spoke-single-azure"
-  region   = "West Europe"
-  cidr     = "10.1.101.0/24"
-  account  = "Azure"
-  attached = false
+  cloud     = "azure"
+  name      = "spoke-single-azure"
+  region    = "West Europe"
+  cidr      = "10.1.101.0/24"
+  account   = "Azure"
+  attached  = false
   instances = { for i in range(1) : "spoke-single-azure-${i + 1}" => {} }
 }
 
 module "multi_instance" {
   source = "../.."
 
-  cloud    = "azure"
-  name     = "spoke-multi-azure"
-  region   = "West Europe"
-  cidr     = "10.1.102.0/24"
-  account  = "Azure"
-  attached = false
+  cloud     = "azure"
+  name      = "spoke-multi-azure"
+  region    = "West Europe"
+  cidr      = "10.1.102.0/24"
+  account   = "Azure"
+  attached  = false
   instances = { for i in range(2) : "spoke-multi-azure-${i + 1}" => {} }
 }
 

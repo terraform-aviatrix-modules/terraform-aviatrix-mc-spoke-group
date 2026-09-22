@@ -14,24 +14,24 @@ provider "aviatrix" {}
 module "single_instance" {
   source = "../.."
 
-  cloud    = "aws"
-  name     = "spoke-single-aws"
-  region   = "eu-central-1"
-  cidr     = "10.1.101.0/24"
-  account  = "AWS"
-  attached = false
+  cloud     = "aws"
+  name      = "spoke-single-aws"
+  region    = "eu-central-1"
+  cidr      = "10.1.101.0/24"
+  account   = "AWS"
+  attached  = false
   instances = { for i in range(1) : "spoke-single-aws-${i + 1}" => {} }
 }
 
 module "multi_instance" {
   source = "../.."
 
-  cloud    = "aws"
-  name     = "spoke-multi-aws"
-  region   = "eu-central-1"
-  cidr     = "10.1.102.0/24"
-  account  = "AWS"
-  attached = false
+  cloud     = "aws"
+  name      = "spoke-multi-aws"
+  region    = "eu-central-1"
+  cidr      = "10.1.102.0/24"
+  account   = "AWS"
+  attached  = false
   instances = { for i in range(3) : "spoke-multi-aws-${i + 1}" => {} }
 }
 

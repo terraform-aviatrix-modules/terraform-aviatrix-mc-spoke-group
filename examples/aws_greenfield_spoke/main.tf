@@ -10,7 +10,7 @@ module "spoke_aws_1" {
   transit_gw     = "avx-eu-west-1-transit"
   network_domain = "blue"
   instances = {
-    "App1"    = {}
+    "App1"   = {}
     "App1-2" = {}
   }
 }

@@ -9,7 +9,7 @@ module "spoke_gcp_1" {
   account    = "GCP-Account"
   transit_gw = "avx-us-east1-transit"
   instances = {
-    "spoke-gcp-1"    = {}
+    "spoke-gcp-1"   = {}
     "spoke-gcp-1-2" = {}
   }
 }
